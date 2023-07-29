@@ -35,7 +35,7 @@ class _MainPageState extends State<MainPage> {
         onPressed: () {
           _onSubmitButton();
         },
-        child: const Text("Submit"),
+        child: const Text('SUBMIT'),
       );
       return controller.loading.value
           ? const Center(

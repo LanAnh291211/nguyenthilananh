@@ -1,6 +1,5 @@
 // ignore_for_file: curly_braces_in_flow_control_structures
 
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pull_to_refresh_flutter3/pull_to_refresh_flutter3.dart';
 

@@ -74,12 +74,7 @@ class _ItemBuilderState extends State<ItemBuilder> {
             widget.index,
             widget.listItem,
           ),
-          // onTapOutside: (event) {
-          //   _onTapNameTextField();
-          // },
-          // onSubmitted: (value) {
-          //   _onTapNameTextField();
-          // },
+
           enabled: widget.isEdit,
         ),
         subtitle: Column(
@@ -100,12 +95,7 @@ class _ItemBuilderState extends State<ItemBuilder> {
                 widget.index,
                 widget.listItem,
               ),
-              // onTapOutside: (event) {
-              //   _onTapSkuTextField();
-              // },
-              // onSubmitted: (value) {
-              //   _onTapSkuTextField();
-              // },
+ 
             ),
             TextField(
               enabled: widget.isEdit,
@@ -118,10 +108,7 @@ class _ItemBuilderState extends State<ItemBuilder> {
                 widget.index,
                 widget.listItem,
               ),
-              // onSubmitted: (value) => _onTapColorTextField(),
-              // onTapOutside: (event) {
-              //   _onTapColorTextField();
-              // },
+
             ),
           ],
         ),
@@ -155,33 +142,5 @@ class _ItemBuilderState extends State<ItemBuilder> {
     }
   }
 
-  // void onTapNameTextField() {
-  //   widget.listItem[widget.index].name = nameController.text;
-  //   for (var editElement in controller.itemEditLists) {
-  //     if (editElement.id == widget.listItem[widget.index].id) {
-  //       editElement.name = nameController.text;
-  //     }
-  //   }
-  // }
 
-  void _onTapColorTextField() {
-    var colorUpdateId = controller.colorItems.any((element) => element.name == colorController.text)
-        ? controller.colorItems.where((element) => element.name == colorController.text).first.id
-        : null;
-    widget.listItem[widget.index].color = colorUpdateId;
-    for (var editElement in controller.itemEditLists) {
-      if (editElement.id == widget.listItem[widget.index].id) {
-        editElement.color = colorUpdateId;
-      }
-    }
-  }
-
-  void _onTapSkuTextField() {
-    widget.listItem[widget.index].sku = skuController.text;
-    for (var editElement in controller.itemEditLists) {
-      if (editElement.id == widget.listItem[widget.index].id) {
-        editElement.sku = skuController.text;
-      }
-    }
-  }
 }

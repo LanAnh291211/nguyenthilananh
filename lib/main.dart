@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:nguyenthilananh/view/main_page.dart';
 
+
+//FLOW: CLICK THE RED BUTTON ON THE RIGHT(Icons.auto_fix_normal) IN ORDER TO EDIT PRODUCT, THEN CLICK ON SUBMIT BUTTON TO SAVE THE CHANGES
+
 void main() {
   runApp(const MyApp());
 }
@@ -34,7 +37,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       builder: EasyLoading.init(),
-      home:  MainPage(),
+      home:  const MainPage(),
     );
   }
 }
